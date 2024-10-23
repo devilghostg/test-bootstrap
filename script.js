@@ -25,10 +25,10 @@ const btn = document.getElementById("btn");
 
 confirmPassword.addEventListener("input", function() {
 
-    if (password.value === "" || confirmPassword.value === "") {
+    if (password.value.trim() === "" || confirmPassword.value.trim() === "") {
         infoMessage.textContent = ""; 
         btn.setAttribute("disabled", "true"); 
-    } else if (password.value === confirmPassword.value) {
+    } else if (password.value.trim() === confirmPassword.value.trim()) {
         infoMessage.textContent = "Les mots de passe correspondent";
         infoMessage.className = "text-success";
         btn.removeAttribute("disabled"); 
