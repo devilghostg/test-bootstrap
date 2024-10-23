@@ -21,6 +21,8 @@ const password = document.getElementById("inputPassword3");
 const confirmPassword = document.getElementById("inputPasswordConfirmation");
 const infoMessage = document.getElementById("info");
 const btn = document.getElementById("btn");
+const form = document.getElementById("form")
+const input = document.querySelector("input")
 
 
 confirmPassword.addEventListener("input", function() {
@@ -38,7 +40,9 @@ confirmPassword.addEventListener("input", function() {
         btn.setAttribute("disabled", "true"); 
     }
 });
-
+form.addEventListener('submit', function(event) {
+    input.value = input.value.replace(/\s+/g, ''); 
+});
 
 password.addEventListener("input", function() {
 
